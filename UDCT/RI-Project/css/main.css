@@ -1,0 +1,118 @@
+/*
+
+Your styles go here!
+
+Hint! You'll probably want to start by styling:
+  * <body>
+  * <article>
+  * <h1>
+  * <img>
+
+I've left some boilerplate below for you.
+
+*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 62.5%;
+  color: #868786;
+  padding-top: 1.25rem;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(255, 255, 255, 0)), url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Livello_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='40px' height='12px' viewBox='0 0 40 12' enable-background='new 0 0 40 12' xml:space='preserve'%3e%3cg id='Page-1'%3e%3cg id='zig-zag'%3e%3cpath id='Combined-Shape' fill='%23A3897A' d='M0,6.171L6.171,0h5.657L0,11.828V6.171L0,6.171z M40,11.828L28.172,0h5.656L40,6.171 V11.828L40,11.828z M6.171,12l12-12h3.657l12,12h-5.656L20,3.829L11.829,12H6.171L6.171,12z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"), url("../assets/logo.svg");
+  background-attachment: fixed, scroll, fixed;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, repeat-y, no-repeat;
+  line-height: 2rem;
+}
+
+.mainheader {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  background: #fff;
+}
+
+.logo {
+  max-width: 33%
+}
+
+.mainbox {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  padding-bottom: 3rem;
+  background-color: #ffffff;
+  background-repeat: repeat-x;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Livello_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='40px' height='12px' viewBox='0 0 40 12' enable-background='new 0 0 40 12' xml:space='preserve'%3e%3cg id='Page-1'%3e%3cg id='zig-zag'%3e%3cpath id='Combined-Shape' fill='%23A3897A' d='M0,6.171L6.171,0h5.657L0,11.828V6.171L0,6.171z M40,11.828L28.172,0h5.656L40,6.171 V11.828L40,11.828z M6.171,12l12-12h3.657l12,12h-5.656L20,3.829L11.829,12H6.171L6.171,12z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  background-position: bottom;
+  /* background-origin: content-box; */ 
+}
+
+.mainbox p {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.mainbox img {
+  max-width: 100%;
+}
+
+.mytit{font-size: 1.125rem; font-weight: 700;}
+
+.photo {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2.5rem
+}
+
+.caption {  
+  font-size: 1.125rem;
+  font-weight: 300
+}
+
+
+.blogfooter {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 2.5rem 1.25rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  min-height: 3.75rem
+}
+
+.blogfooter a.social {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #A3897A;
+  flex-basis: 3rem;
+}
+
+.blogfooter small {
+  margin-left: auto;
+}
+
+.blogfooter small a.credits {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #A3897A;
+  text-decoration: none;
+}
+
+/* zocial */
+
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
