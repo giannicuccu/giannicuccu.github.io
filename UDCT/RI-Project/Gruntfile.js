@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     /* Clear out the images directory if it exists */
     clean: {
       dev: {
-        src: ['images'],
+        src: ['images','images_webp'],
       },
     },
 
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
     mkdir: {
       dev: {
         options: {
-          create: ['images']
+          create: ['images','images_webp']
         },
       },
     },
@@ -80,12 +80,32 @@ module.exports = function(grunt) {
         }]
       },
     },
+
+    cwebp: {
+        dynamic: {
+        options: {
+          q: 40
+        },
+        files: [{
+          expand: true,
+          cwd: 'images/', 
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images_webp/'
+        }]
+      }
+    }
+
+
+
   });
   
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images','cwebp']);
+
+  grunt.loadNpmTasks('grunt-cwebp');
+  grunt.registerTask('jpgtowebp', ['cwebp']);
 
 };
