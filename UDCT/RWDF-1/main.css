@@ -1,0 +1,725 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  /* height: 100%;  Removed to hide the lateral scrollbar */
+  width: 100vw;
+  overflow-x: hidden; /* fix for right sliding menu */
+  
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #424242;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+header,
+nav,
+footer,
+section,
+article,
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+ *
+ * Common
+ * 
+ */
+
+.news__more {
+  float: right;
+  font-size: .8em;
+  color: #333;
+  text-decoration: none;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  min-height: 56px;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.header__logo {
+  height: 72px;
+  margin-right: 1em;
+  vertical-align: top;
+  margin: 12px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 4em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
+  color: #212121;
+}
+
+#menuToggler {
+  display: none;
+}
+
+#menuToggleLabel {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+  display: none;
+  outline: none;
+  z-index: 11;
+}
+
+#menuToggleLabel span {
+  display: block;
+  text-indent: -9999px;
+}
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  transition: transform 0.5s ease-in-out;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+section.content {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.hero {
+  width: 60%;
+  position: relative;
+  /* background-image: url("./images/dog-medium.jpg");
+  background-image: -webkit-image-set( url('./images/dog-medium.webp') 1x, url('./images/dog-medium-2x.webp') 2x );
+  background-size: cover;
+  background-position: center center; */
+  /* height: 300px; */
+}
+
+.hero .heropic {
+  max-width: 100%;
+ 
+}
+
+.hero article {
+  box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  padding: 1em;
+}
+
+/*
+ *
+ * Top News
+ *
+ */
+
+.top-news {
+  width: 40%;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
+}
+
+.news__title {
+  font-weight: 300;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.top-news__item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+
+.top-news__item:before {
+  content: "» ";
+}
+
+.top-news__item:last-child {
+  border-bottom: none;
+}
+
+.top-news__item a {
+  text-decoration: none;
+  color: #666;
+}
+
+.top-news__item a:hover,
+.top-news__item a:active {
+  text-decoration: underline;
+}
+
+/*
+ *
+ * Sport Scores
+ *
+ */
+
+.scores {
+  width: 60%;
+  padding-top: 1em;
+}
+
+.scores__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores__table th,
+.scores__table td {
+  padding: 1em;
+}
+
+.scores__table th {
+  color: #fff;
+  font-weight: 300;
+  background-color: #78909C;
+}
+
+.scores__table tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.scores__table tr:nth-child(even) td {
+  background-color: #eceff1;
+}
+
+.scores__table td.winner {
+  font-weight: bold;
+}
+
+.scores__table td:nth-child(3) {
+  text-align: right;
+}
+
+.scores__table td:nth-child(2),
+.scores__table td:nth-child(5) {
+  text-align: center;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.weather {
+  width: 40%;
+  padding: 1em;
+}
+
+.weather__location {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.weather__desc {
+  display: block;
+  font-size: 1.2em;
+}
+
+.weather__today {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.weather__today__image {
+  vertical-align: middle;
+}
+
+.weather__today__temp {
+  font-size: 3em;
+}
+
+.weather__today__deg {
+  font-size: 2em;
+  display: inline;
+}
+
+.weather__next__item {
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+
+.weather__next__item span {
+  display: block;
+}
+
+.weather__next__image {
+  width: 100%;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.recent-news {
+  clear: both;
+  padding: 1em;
+}
+
+.recent-news ul {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.snippet {
+  width: 48%;
+  margin: 0;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.snippet__thumbnail {
+  width: 40%;
+  float: left;
+  margin-right: 1em;
+}
+
+.snippet__title {
+  font-weight: 500;
+}
+
+.snippet__title a {
+  text-decoration: none;
+  color: #666;
+}
+
+.snippet__title a:hover,
+.snippet__title a:active {
+  text-decoration: underline;
+}
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+/*
+ *
+ * Media Queries
+ *
+ */
+
+/* TABLETS
+*/
+
+@media all and (max-width: 720px) {
+  body {
+    font-size: 14px;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  section.content {
+    flex-flow: column;
+  }
+  .header__logo {
+    height: 50px;
+    margin-top: 20px;
+  }
+  .header__title {
+    font-size: 1.8em;
+    margin-top: 34px;
+  }
+  .hero {
+    width: 100%;
+    /* min-height: 300px; */
+  }
+  .hero article.description {
+    padding: 1em 24px 1em 24px;
+  }
+  .top-news {
+    width: 100%;
+    min-height: 150px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .scores {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    background-color: #f8f8f8
+  }
+  .weather {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .weather__today {
+    width: 100%;
+  }
+  .weather-left {
+    width: 50%;
+    float: left;
+  }
+  .weather__next {
+    float: right;
+    width: 50%;
+  }
+  .weather__next__image {
+    width: 80%;
+  }
+  .scores__table th,
+  .scores__table td {
+    padding: .5em;
+  }
+  .scores__table td:nth-child(1) {
+    text-align: center;
+  }
+  .recent-news {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .recent-news p {
+    line-height: 1.44em;
+  }
+  .news__title {
+    line-height: 48px;
+    font-weight: 600;
+  }
+  footer {
+    background-color: #f8f8f8;
+  }
+  footer li {
+    display: block;
+  }
+  footer a {
+    display: block;
+    padding: 24px 0;
+    font-size: 1.1em
+  }
+
+  .snippet__thumbnail {
+    width: 100%;
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+/* LARGE SMARTPHONES
+*/
+
+@media all and (max-width: 425px) {
+  main {
+    padding-top: 62px
+  }
+  header.header {
+    position: fixed;
+    background: white;
+    z-index: 9;
+  }
+  /*move logo and name to the left*/
+  .header__inner {
+    justify-content: flex-start;
+  }
+  .header__title {
+    font-size: 1.6em;
+    margin-top: 24px;
+  }
+  .header__logo {
+    height: 40px;
+    margin-top: 14px;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  /* off canvas menu show/hide 
+  inspired to this https://codepen.io/erikterwan/pen/EVzeRP
+  */
+  .nav {
+    display: block;
+    position: fixed;
+    width: 250px;
+    transform: translate3d(250px, 0, 0);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background: rgba(248, 247, 247, 0.98);
+    z-index: 8;
+  }
+  #menuToggler:checked~nav {
+    transform: none;
+  }
+  #menuToggleLabel {
+    display: block;
+  }
+  #menuToggleLabel:before {
+    content: '\2630';
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+  }
+  #menuToggler:checked+#menuToggleLabel:before {
+    content: '\2716';
+  }
+  /*off canvas items style*/
+  .nav__list {
+    display: block;
+    padding-top: 80px;
+  }
+  .nav li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+  }
+  .nav li a {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+/*MINOR BREAKPOINTS*/
+
+/*phablets */
+
+@media all and (max-width: 560px) {
+  .snippet {
+    width: 100%;
+  }
+
+  .snippet__thumbnail {
+    width: calc(50vw);
+  }
+}
+
+@media screen and (max-width:560px) {
+  .weather {
+    display: flex;
+    flex-flow: column;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .weather-left {
+    width: 100%;
+  }
+  .weather__next {
+    width: 100%;
+  }
+}
+
+/*small phones*/
+
+@media all and (max-width: 375px) {
+  .hero p {
+    display: none
+  }
+  .header__title {
+    font-size: 1.4em;
+    margin-top: 22px;
+  }
+  .header__logo {
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .snippet__thumbnail {
+    width: calc(100vw - 3.5em);
+    float:none;
+  }
+
+  h3.snippet__title{
+    margin-top: 0.3125rem
+  }
+  .recent-news p {
+    margin-top: 0.3125rem
+}
+  
+}
+
+/* no more tables with some changes*/
+
+@media only screen and (max-width: 460px) {
+  /* Force table to not be like tables anymore */
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block;
+    margin: 0;
+    padding: 0 px;
+    -webkit-border-horizontal-spacing: 0;
+    -webkit-border-vertical-spacing: 0;
+    background: none;
+    border-collapse: collapse;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #no-more-tables tr {
+    border: 0px solid #ccc;
+  }
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 2px solid #eee;
+    position: relative;
+    padding-left: 0%;
+    white-space: normal;
+    /* text-align:left; */
+  }
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    /* top: -22px;
+  left: 6px;
+  width: 45%; 
+  padding-right: 10px; 
+  white-space: nowrap;
+  text-align:left;
+  font-weight: bold; */
+    display: none
+  }
+  /*
+Label the data
+*/
+  #no-more-tables td:before {
+    content: attr(data-title);
+  }
+  #no-more-tables td[data-title="date"] {
+    padding: 10px 0;
+    margin: 0;
+    margin-top: 15px;
+    text-transform: uppercase
+  }
+  #no-more-tables td[data-title="team"] {
+    padding: 0;
+    margin: 0;
+    width: calc((100% - 13px)/4);
+    display: inline-block;
+    font-size: 16px;
+  }
+  #no-more-tables td[data-title="score"] {
+    padding: 0;
+    margin: 0;
+    width: calc((100% - 13px)/4);
+    display: inline-block;
+    font-size: 16px;
+  }
+}

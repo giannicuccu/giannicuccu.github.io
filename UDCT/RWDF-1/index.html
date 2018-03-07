@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- added maximum-scale=1.0, user-scalable=no to fix right menu offcanvas weird behaviour in dev tools emulators -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Brighton Times</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <img class="header__logo" src="images/logo.svg" alt="iconic view of a cityscape">
+      <h1 class="header__title">
+        The Brighton Times
+      </h1>
+
+    </div>
+  </header>
+  <!-- using checkbox label to toggle offcanvas menu -->
+  <input type="checkbox" name="" id="menuToggler">
+  <label for="menuToggler" id="menuToggleLabel" title="toggle Main Menu">
+    <span>Toggle Menu</span>
+  </label>
+  <nav id="drawer" class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#">News</a>
+      </li>
+      <li class="nav__item">
+        <a href="#">Events</a>
+      </li>
+      <li class="nav__item">
+        <a href="#">Culture</a>
+      </li>
+      <li class="nav__item">
+        <a href="#">Blog</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content">
+      <section class="hero">
+        <picture>
+          <source type="image/webp" srcset="images/dog-zoom-medium.jpg 1x, images/dog-zoom-medium-2x.jpg 2x" media="(max-width: 401px)">
+          <source type="image/webp" srcset="images/dog-medium.webp 1x, images/dog-medium-2x.webp 2x">
+          <source type="image/jpg" srcset="images/dog-medium.jpg 1x, images/dog-medium-2x.jpg 2x">
+          <img class="heropic" src="images/dog-medium.jpg" alt="picture of a girl with a large, stuffed dog toy">
+        </picture>
+        <article class="description">
+          <h2>Absolutely astonishing breaking news!</h2>
+          <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh
+            lomo Kickstarter art lomo Kickstarter art four loko.</p>
+        </article>
+      </section>
+
+      <section class="news top-news">
+        <h2 class="news__title">Top news
+          <a href="#" class="news__more">+ more</a>
+        </h2>
+        <ul>
+          <li class="top-news__item">
+            <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
+          </li>
+          <li class="top-news__item">
+            <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
+          </li>
+          <li class="top-news__item">
+            <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
+          </li>
+          <li class="top-news__item">
+            <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="scores" id="no-more-tables">
+        <table class="scores__table">
+          <thead>
+            <tr>
+              <th>date</th>
+              <th>team</th>
+              <th colspan="2">score</th>
+              <th>team</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-title="date">Friday</td>
+              <td data-title="team">Juventus</td>
+              <td data-title="score">1</td>
+              <td data-title="score" class="winner">2</td>
+              <td data-title="team" class="winner">Milan</td>
+            </tr>
+            <tr>
+              <td data-title="date">Friday</td>
+              <td data-title="team" class="winner">Cagliari</td>
+              <td data-title="score" class="winner">3</td>
+              <td data-title="score">1</td>
+              <td data-title="team">Inter</td>
+            </tr>
+            <tr>
+              <td data-title="date">Saturday</td>
+              <td data-title="team" class="winner">Roma</td>
+              <td data-title="score" class="winner">3</td>
+              <td data-title="score">0</td>
+              <td data-title="team">Napoli</td>
+            </tr>
+            <tr>
+              <td data-title="date">Sunday</td>
+              <td data-title="team">Inter</td>
+              <td data-title="score">2</td>
+              <td data-title="score" class="winner">3</td>
+              <td data-title="team" class="winner">Milan</td>
+            </tr>
+            <tr>
+              <td data-title="date">Sunday</td>
+              <td data-title="team" class="winner">Napoli</td>
+              <td data-title="score" class="winner">1</td>
+              <td data-title="score">0</td>
+              <td data-title="team">MIlan</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section class="weather">
+        <div class="weather-left">
+          <span class="weather__location">Brighton, UK</span>
+          <span class="weather__desc">Sunny</span>
+          <span class="weather__today">
+            <picture>
+              <img class="weather__today__image" src="images/weather-small.png" alt="icon of a partially sunny day">
+              <span class="weather__today__temp">13</span>
+              <span class="weather__today__deg">&deg;C</span>
+            </picture>
+          </span>
+        </div>
+        <ul class="weather__next">
+          <li class="weather__next__item">
+            <span>Mon</span>
+            <img class="weather__next__image" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABSElEQVRo3u3bfQ2DMBCHYaQgBQnImAwkIAEJk1ApzEEd3I6kWTISRgZX2gvvkt9/ZHDPyld7a0SkuXMaAAAAAAAAAABgewODj7wenWbQBM2skY3MaZtl285k36UAUtGTJv4oeC8xfUfnBiAVHk4UvZVwBOIyAD24VvPMUPg6yz7aqgD0gPqTQ/3IqdFXAaAHMl5Y+DpjUYB0gZLCmYoAVFL8LkIWgMLD/q/TwRwgXfCk0vRZAdKtLlYMENe3SGuAZ8XFf54TsgCkJzxxki4HQHAEEEwBnP36X6PACmByCDBZAkSHANEEwOnw/5wGFgCDY4DBAiA4BggWALNjgNkCQFwHgLsDLC9wjAAAAOA2yIMQj8K8DPE6zIQIU2JMijItzsIIS2MsjrI8ToMELTI0SdEmR6MkrbI0S9Muzx8mAAAAAAAAAODWeQOVHtd8uNjSvQAAAABJRU5ErkJggg=="
+              alt="icon of a sunny day">
+            <span>13 &deg;C</span>
+          </li>
+          <li class="weather__next__item">
+            <span>Tues</span>
+            <img class="weather__next__image" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACCElEQVRIx+3XUZGDMBAGYCQgAQmVEAmVgAQkICESkFAJkcDr/4aEOMg93OYm0yuUpBsSyjKzL7TTko9NdrdxzjVXjkYABEAABEAABEAABEAABEAAfm8wXAA6ABrADMA9xUyfdU2BKzsALc7tjPFrAAC0K2/8XcwA2lMDfLD4P4TqAQAoABMAQzH6fRyZ9kW3QxLAxgJbOvAcQ9gjDsZoAAD3lQd+ML59H5oyK1v1SAFYVh52oM9nRoDdUIcAALhtPISi77hCkVQ9YgHUFgCdAe5MCGwAQflzhUNnAaDFm5XTegy+5yqIjhUAQL/yR5NPOTofdCUAmg1gI+37YNB5VLLw6E5yD4DZWLyiLeBqC06Af2m/oyJ8LcAStLv2igA+9U3Ni+cG8K2t3dEN1hzGv8BYgPvT3p9OChB2i12OYehMYT1CCoD7kphTZoG2UMoaipn5t/uaAaZXPT2VYK5zyNS4BSwAFYAPAEaKIZg9WLrQGg9BFQxgdgWoD0qy8ih07x7Tp6QA5CyD05vp81VT1hKC8nh0f8wFkLMR6iLabEtbwr5o1297X1Y0QMZWeKbfHrjqPGXHFuYjFSDHMGRiUjdiO01sZfCIixFgYRmGDlz0UmIiLA4AQGeeAMdqAegsOaKr1LUCqKNa61oBbtUDXC0EQAAEQAAEQAAEQAAEQAAEQAAEQAAuGD8VWdGmATXAwQAAAABJRU5ErkJggg=="
+              alt="icon of a cloudy day">
+            <span>13 &deg;C</span>
+          </li>
+          <li class="weather__next__item">
+            <span>Wed</span>
+            <img class="weather__next__image" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACCElEQVRIx+3XUZGDMBAGYCQgAQmVEAmVgAQkICESkFAJkcDr/4aEOMg93OYm0yuUpBsSyjKzL7TTko9NdrdxzjVXjkYABEAABEAABEAABEAABEAAfm8wXAA6ABrADMA9xUyfdU2BKzsALc7tjPFrAAC0K2/8XcwA2lMDfLD4P4TqAQAoABMAQzH6fRyZ9kW3QxLAxgJbOvAcQ9gjDsZoAAD3lQd+ML59H5oyK1v1SAFYVh52oM9nRoDdUIcAALhtPISi77hCkVQ9YgHUFgCdAe5MCGwAQflzhUNnAaDFm5XTegy+5yqIjhUAQL/yR5NPOTofdCUAmg1gI+37YNB5VLLw6E5yD4DZWLyiLeBqC06Af2m/oyJ8LcAStLv2igA+9U3Ni+cG8K2t3dEN1hzGv8BYgPvT3p9OChB2i12OYehMYT1CCoD7kphTZoG2UMoaipn5t/uaAaZXPT2VYK5zyNS4BSwAFYAPAEaKIZg9WLrQGg9BFQxgdgWoD0qy8ih07x7Tp6QA5CyD05vp81VT1hKC8nh0f8wFkLMR6iLabEtbwr5o1297X1Y0QMZWeKbfHrjqPGXHFuYjFSDHMGRiUjdiO01sZfCIixFgYRmGDlz0UmIiLA4AQGeeAMdqAegsOaKr1LUCqKNa61oBbtUDXC0EQAAEQAAEQAAEQAAEQAAEQAAEQAAuGD8VWdGmATXAwQAAAABJRU5ErkJggg=="
+              alt="icon of a cloudy day">
+            <span>13 &deg;C</span>
+          </li>
+          <li class="weather__next__item">
+            <span>Thu</span>
+            <img class="weather__next__image" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABz0lEQVRIx+3X7W2DMBAGYEZgBEZgBBao1BEyQkZgBEZghGxQRvBf/mUENricq1OFUKJi+87445BeqWnVs/0QzqYBgKbmNAqgAAqgAApw/KXnta5rh5kwBgOHGPpb10S+ogDQ4uBkxmIAcDHthzv+X+z/tFkDBCz+DyF3gClg8dEeBxEAanjAkE26MUoBTEwAQLVGqd1DCsAwApyGSgkALorz7sEOQN0fckEoEcDpcSjtEdiniw6Ag/bMO4D4t4AFgPb9RyILdzpJBgPgQAMdWCC1iAPQ4iHViALQ136rGWBJefGiANTtIcPYm3bjAJgzBdifFrsQgGfmAED9q/MFgEJinAESOetz5lY7wFLzI/CbWptgEMBcO0BfNUAuR+GTeRT7MiSyDZZ2eb8NKoACKMDH6+tn7TEjZrE/+04uRh12ABxgwMAuo+eko9SRADCHARfPiUepwwqAxe+HwWxmj0lHq8MGgIVbzHYYzH5uHScdtQ4nwPxG++5x16LWYQF402hsDEPDEq/DBWDeDDgwNCzxOsEAOTY+NoBcGx8nQJaNjxNgCW1YV9cJBRhDG9bVdUIBehroifkOfFm5pI4zQE1RAAVQAAVQAAVQAAWoNi/sHp23RRGGZQAAAABJRU5ErkJggg=="
+              alt="icon of a rainy day">
+            <span>13 &deg;C</span>
+          </li>
+          <li class="weather__next__item">
+            <span>Fri</span>
+            <img class="weather__next__image" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABSElEQVRo3u3bfQ2DMBCHYaQgBQnImAwkIAEJk1ApzEEd3I6kWTISRgZX2gvvkt9/ZHDPyld7a0SkuXMaAAAAAAAAAABgewODj7wenWbQBM2skY3MaZtl285k36UAUtGTJv4oeC8xfUfnBiAVHk4UvZVwBOIyAD24VvPMUPg6yz7aqgD0gPqTQ/3IqdFXAaAHMl5Y+DpjUYB0gZLCmYoAVFL8LkIWgMLD/q/TwRwgXfCk0vRZAdKtLlYMENe3SGuAZ8XFf54TsgCkJzxxki4HQHAEEEwBnP36X6PACmByCDBZAkSHANEEwOnw/5wGFgCDY4DBAiA4BggWALNjgNkCQFwHgLsDLC9wjAAAAOA2yIMQj8K8DPE6zIQIU2JMijItzsIIS2MsjrI8ToMELTI0SdEmR6MkrbI0S9Muzx8mAAAAAAAAAODWeQOVHtd8uNjSvQAAAABJRU5ErkJggg=="
+              alt="icon of a sunny day">
+            <span>13 &deg;C</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="news recent-news">
+        <h2 class="news__title">Latest news
+          <a href="#" class="news__more">+ more</a>
+        </h2>
+        <ul>
+          <li class="snippet">
+            <picture>
+              <source type="image/webp" srcset="images/dog-small.webp 1x, images/dog-small-2x.webp 2x">
+              <source type="image/jpg" srcset="images/dog-small.jpg 1x, images/dog-small-2x.jpg 2x">
+              <img class="snippet__thumbnail" src="images/dog-small.jpg" alt="picture of a girl with a large, stuffed dog toy">
+            </picture>
+            <h3 class="snippet__title">
+              <a href="#">Gastropub distillery Marfa farm-to-table</a>
+            </h3>
+            <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut
+              scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic
+              raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester.
+              Organic raw denim Vice keffiyeh four loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut
+              scenester. Organic raw denim Vice keffiyeh four loko.
+            </p>
+          </li>
+          <li class="snippet">
+            <picture>
+              <source type="image/webp" srcset="images/dog-small.webp 1x, images/dog-small-2x.webp 2x">
+              <source type="image/jpg" srcset="images/dog-small.jpg 1x, images/dog-small-2x.jpg 2x">
+              <img class="snippet__thumbnail" src="images/dog-small.jpg" alt="picture of a girl with a large, stuffed dog toy">
+            </picture>
+            <h3 class="snippet__title">
+              <a href="#">Organic raw keffiyeh four loko.</a>
+            </h3>
+            <p>Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice keffiyeh four
+              loko.Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic raw denim Vice loko.
+            </p>
+          </li>
+          <li class="snippet">
+            <picture>
+              <source type="image/webp" srcset="images/dog-small.webp 1x, images/dog-small-2x.webp 2x">
+              <source type="image/jpg" srcset="images/dog-small.jpg 1x, images/dog-small-2x.jpg 2x">
+              <img class="snippet__thumbnail" src="images/dog-small.jpg" alt="picture of a girl with a large, stuffed dog toy">
+            </picture>
+            <h3 class="snippet__title">
+              <a href="#">Kickstarter art party cronut scenester.</a>
+            </h3>
+            <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut
+              scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic
+              raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+            </p>
+          </li>
+          <li class="snippet">
+            <picture>
+              <source type="image/webp" srcset="images/dog-small.webp 1x, images/dog-small-2x.webp 2x">
+              <source type="image/jpg" srcset="images/dog-small.jpg 1x, images/dog-small-2x.jpg 2x">
+              <img class="snippet__thumbnail" src="images/dog-small.jpg" alt="picture of a girl with a large, stuffed dog toy">
+            </picture>
+            <h3 class="snippet__title">
+              <a href="#">Squid lomo Kickstarter art party cronut </a>
+            </h3>
+            <p>Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache. Squid lomo Kickstarter art party cronut
+              scenester. Organic raw denim Vice keffiyeh four loko. Squid lomo Kickstarter art party cronut scenester. Organic
+              raw denim Vice keffiyeh four loko.Vice keffiyeh four loko.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="#">Contact us</a>
+        </li>
+        <li>
+          <a href="#">Follow us on Twitter</a>
+        </li>
+        <li>
+          <a href="#">RSS</a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+</body>
+
+</html>
