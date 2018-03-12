@@ -66,12 +66,7 @@ body {
   max-width: 100%;
 }
 
-.mainbox picture {
-  max-width: 100%;
-}
-
-
-.mytit{font-size: 1.125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.mytit{font-size: 1.125rem; font-weight: 700;}
 
 .photo {
   margin: 0;
@@ -81,8 +76,7 @@ body {
 
 .caption {  
   font-size: 1.125rem;
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 300
 }
 
 
@@ -117,8 +111,8 @@ body {
   text-decoration: none;
 }
 
-
 /* zocial */
+
 @font-face {
   font-family: 'zocial';
   font-style: normal;
