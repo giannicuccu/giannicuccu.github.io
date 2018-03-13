@@ -1,0 +1,427 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 3.2rem;
+    font-family: 'Hind', sans-serif;
+    margin: 0;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+section,
+nav,
+footer {
+    max-width: 94.8rem;
+    /* max width = 948px */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    padding: 0 2rem;
+}
+
+.headertop {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 0.5rem solid #22d2d3;
+    padding-top: 6.4rem;
+    padding-bottom: 2.2rem;
+    /* margin-bottom: 2.7rem; */
+}
+
+#logo {
+    max-width: 7.6rem;
+}
+
+.headerleftbox {
+    padding-left: 4rem;
+    text-align: right;
+}
+
+.maintitle {
+    font-size: 5.8rem;
+    line-height: 4.8rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    color: #2e4146;
+}
+
+.mainsubtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #2e4146;
+}
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+#menuToggler {
+    display: none;
+}
+
+#menuToggleLabel {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 2rem;
+    top: 2.8rem;
+    display: none;
+    outline: none;
+    z-index: 11;
+    color: #fff;
+}
+
+#menuToggleLabel span {
+    display: block;
+    text-indent: -9999px;
+}
+
+.nav {
+    transition: transform 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+.navlist {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 5rem;
+}
+
+.navitem {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: right;
+    line-height: 2rem;
+    flex-grow: 0.05;
+    text-transform: uppercase;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #22d2d3;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #22d2d3;
+}
+
+.hero {
+    margin-bottom: 0;
+    line-height: 0;
+    margin-bottom: 4.3rem;
+}
+
+.hero img {
+    max-width: 100%;
+}
+
+.works {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 4.3rem;
+}
+
+.featheading {
+    flex-basis: 100%;
+    font-weight: 700;
+    color: #7c97ad;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.1rem;
+}
+
+.featdescr {
+    flex-basis: 100%;
+    font-weight: 200;
+    color: #2e4146;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.1rem;
+    line-height: 2rem;
+}
+
+.workdetails {
+    width: calc(33.33333% - 2rem);
+    box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #7c97ad;
+}
+
+.projthumb {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.projname {
+    text-align: center;
+    color: #2e4146;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.projurl {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #22d2d3;
+}
+
+.projurl:hover {
+    color: #7c97ad
+}
+
+
+#footer p{
+    background-color: #22d2d3;
+    color: #2e4146;
+    font-size: 2rem;
+    padding: .5rem 2rem
+    
+}
+
+#footer a{
+    float: right;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*MID TABLETS*/
+
+@media screen and (min-width:769px) and (max-width:947px) {
+    
+    
+
+    .projname {
+        font-size: 2.5vw;
+        line-height: 2.5vw;
+    }
+
+    .projurl {
+        font-size: 1.4vw;
+        line-height: 1.4vw;
+        display: block;
+        text-align: center;
+    }
+}
+
+/*TABLET*/
+
+@media screen and (min-width:412px) and (max-width:768px) {
+    
+    .navlist {
+        justify-content: space-between;       
+    }
+
+    .nav a {
+       text-align: center;
+    }
+
+    .works h2 {
+        padding-left: 0rem;
+    }
+
+    .workdetails {
+        flex-basis: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .projthumb {
+        max-width: calc(40% - 2vw);
+        float: left;
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .projname {
+        text-align: left;
+        margin-top: 2rem;
+        color: #2e4146;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+
+    .projurl {
+        display: block;
+        text-align: left;
+        font-size: 1.4rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/*SMARTPHONES*/
+
+@media screen and (max-width:412px) {
+
+    .headertop {
+        margin-bottom: 0;
+        padding: 1.5rem 2rem;
+        position: fixed;
+        background: #22d2d3;
+        width: 100vw;
+        margin: 0 -2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+        border-bottom: none;
+        justify-content: flex-start;
+        z-index: 9;
+    }
+
+    .headerleftbox {
+        padding-left: 1rem;
+        text-align: left;
+    }
+
+    .maintitle {
+        font-size: 3rem;
+        line-height: 2.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0.4rem 0 -0.4rem 0;
+        color: #fff;
+    }
+
+    .mainsubtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 2rem;
+    }
+
+    #logo {
+        max-width: 4.6rem;
+    }
+
+    .nav {
+        display: block;
+        position: fixed;
+        width: 25rem;
+        transform: translate3d(25rem, 0, 0);
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background: #22d2d3;
+        z-index: 8;
+    }
+
+    #menuToggler:checked~nav {
+        transform: none;
+    }
+
+    #menuToggleLabel {
+        display: block;
+    }
+
+    #menuToggleLabel:before {
+        content: '\2630';
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #menuToggler:checked+#menuToggleLabel:before {
+        content: '\2716';
+    }
+
+    #menuToggler:checked+section {
+        display: none
+    }
+    /*off canvas items style*/
+    .navlist {
+        display: block;
+        padding-top: 8rem;
+    }
+
+    .nav li {
+        display: block;
+        border-bottom: 1px solid #fff;
+    }
+
+    .nav li a {
+        display: block;
+        font-size: 1.5rem;
+        color: #fff;
+        padding: 2.4rem;
+        text-align: center;
+    }
+
+    .hero {
+        padding-top: 7.5rem;
+        width: 100vw;
+        margin: 0 -2rem 4rem -2rem;
+    }
+
+    .works h2 {
+        padding-left: 0rem;
+        text-align: center;
+        /* background: red; */
+    }
+
+    .featdescr {
+        margin-bottom: 5rem;
+    }
+
+    .workdetails {
+        flex-basis: 100%;
+        margin-bottom: 4rem;
+        border: 1px solid #d4dee1;
+    }
+
+    .projthumb {
+        max-width: 100%;
+        float: none;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    .projname {
+        text-align: center;
+        color: #2e4146;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 3rem;
+    }
+
+    .projurl {
+        display: block;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #footer{
+        width: 100vw;
+        margin: 0 -2rem;
+        position: fixed;
+        bottom: 0;
+    }
+}

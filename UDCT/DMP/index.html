@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:300,400,700">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DMP Gianni Cuccu</title>
+</head>
+
+<body>
+    <div id=wrapper>
+        <header class=headertop>
+            <img id=logo src="img/ug-logo.svg" alt="G logo">
+            <div class=headerleftbox>
+                <h1 class=maintitle>Gianni C.</h1>
+                <p class=mainsubtitle>Frontend student</p>
+            </div>
+        </header>
+        <input type="checkbox" id=menuToggler>
+        <label for="menuToggler" id=menuToggleLabel title="toggle Main Menu">
+            <span>Toggle Menu</span>
+        </label>
+        <nav id=drawer class=nav>
+            <ul class=navlist>
+                <li class=navitem>
+                    <a href="#">Home</a>
+                </li>
+                <li class=navitem>
+                    <a href="#">About</a>
+                </li>
+                <li class=navitem>
+                    <a href="#">Porfolio</a>
+                </li>
+                <li class=navitem>
+                    <a href="#">Blog</a>
+                </li>
+                <li class=navitem>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <section class=hero>
+            <picture>
+                <!-- small jpg hero image for smarphones 
+                        TODO: add webp versions          -->
+                <source type="image/jpg" srcset="img/hero-412.jpg 1x, img/hero-medium.jpg 2x" media="(max-width: 412px)">
+                <!-- medium jpg/webp @ 1x and 2x  for tablets/desktops -->
+                <source type="image/webp" srcset="img/hero-medium.webp 1x, img/hero-medium-2x.webp 2x">
+                <source type="image/jpg" srcset="img/hero-medium.jpg 1x, img/hero-medium-2x.jpg 2x">
+                <!-- default jpg fallback -->
+                <img src="img/hero-medium.jpg" alt="Frontend developer desk">
+            </picture>
+        </section>
+        <section class=works>
+            <h2 class=featheading>Featured Projects</h2>
+            <p class=featdescr>Some of my projects from Udacity Frontend Developer Nanodegree program</p>
+            <article class=workdetails>
+                <img class=projthumb src="img/pam-small.jpg" srcset="img/pam-small-2x.jpg 2x" alt="Project PAM screenshot">
+                <h3 class=projname>Pixel art maker</h3>
+                <a class=projurl href="https://giannicuccu.github.io/UDCT/PAM/index.html" target=_blank title="Pixel Art Maker proj">giannicuccu.github.io/UDCT/PAM</a>
+            </article>
+            <article class=workdetails>
+                <img class=projthumb src="img/rimg-small.jpg" srcset="img/rimg-small-2x.jpg 2x" alt="Project images blog screenshot">
+                <h3 class=projname>Images blog</h3>
+                <a class=projurl href="https://giannicuccu.github.io/UDCT/RIMG/" target=_blank title="Responsive images proj">giannicuccu.github.io/UDCT/RIMG</a>
+            </article>
+            <article class=workdetails>
+                <img class=projthumb src="img/rwd-small.jpg" srcset="img/rwd-small-2x.jpg 2x" alt="Project Brighton Times screenshot">
+                <h3 class=projname>The Brighton Times</h3>
+                <a class=projurl href="https://giannicuccu.github.io/UDCT/RWD/" target=_blank title="The Brighton Times responsive app">giannicuccu.github.io/UDCT/RWDF</a>
+            </article>
+        </section>
+        <footer id=footer>
+            <p>2018 - Gianni C.
+                <a href="#" title="Get in touch">🗪 Contact</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
