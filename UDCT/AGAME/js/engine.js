@@ -84,7 +84,6 @@ var Engine = (function(global) {
     function update(dt) {
          updateEntities(dt)
         //gameState === 'stopped' ? win.cancelAnimationFrame(animation): updateEntities(dt) ;
-
         // checkCollisions();
     }
 
@@ -176,8 +175,14 @@ var Engine = (function(global) {
         player.render();
        
         ctx.font='20px Monospace';
+        
+        // print level, score and health 
         ctx.fillText('Level: '+level + '  Score: '+player.score,0,30);
         ctx.fillText('Health:'+player.healthLevel ,370,30);
+
+        messageManager.render();
+
+        
     }
 
     /* This function does nothing but it could have been a good place to
