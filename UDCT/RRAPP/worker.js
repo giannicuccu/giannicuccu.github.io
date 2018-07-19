@@ -34,7 +34,7 @@ self.addEventListener('install', function(event) {
 
     if(event.request.url.includes('restaurant.html')){
     event.respondWith(
-      caches.match('/restaurant.html').then(function(response){                
+      caches.match('https://giannicuccu.github.io/UDCT/RRAPP/restaurant.html').then(function(response){                
           return response ;
         })
     );
