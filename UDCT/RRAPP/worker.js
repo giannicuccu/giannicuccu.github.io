@@ -1,7 +1,7 @@
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open('restaurant-reviews-32')
+      caches.open('restaurant-reviews-1')
       .then(function(cache) {
         return cache.addAll([
           'https://giannicuccu.github.io/UDCT/RRAPP/', 
@@ -62,7 +62,7 @@ self.addEventListener('install', function(event) {
       //   //return caches.match('/img/offlinemap.png');
       // }
 
-      return caches.open('restaurant-reviews-32')
+      return caches.open('restaurant-reviews-1')
       .then(function(cache) {
         if (response.type !== 'opaque'){          
           cache.put(url, response.clone());
