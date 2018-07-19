@@ -8,7 +8,7 @@ if (!navigator.serviceWorker) {
   console.log('NO SERVICE WORKER')
 }else{
   //navigator.serviceWorker.register('/worker.js').then(function() {
-    navigator.serviceWorker.register('/worker.js').then(function() {
+    navigator.serviceWorker.register('https://giannicuccu.github.io/UDCT/RRAPP/worker.js').then(function() {
     console.log('Registration worked!');
   }).catch(function() {
     console.log('Registration failed!');
@@ -189,12 +189,12 @@ createRestaurantHTML = (restaurant) => {
   const picture = document.createElement('picture');
   const sourceWebP = document.createElement('source');
   sourceWebP.type = 'image/webp';
-  sourceWebP.srcset = '/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '.webp';
+  sourceWebP.srcset = 'https://giannicuccu.github.io/UDCT/RRAPP/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '.webp';
   sourceWebP.media = "(min-width: 426px)";
 
   const sourceJpgSmall = document.createElement('source');
   sourceJpgSmall.type = 'image/jpg';
-  sourceJpgSmall.srcset = '/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '-small.jpg';
+  sourceJpgSmall.srcset = 'https://giannicuccu.github.io/UDCT/RRAPP/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '-small.jpg';
   sourceJpgSmall.media = "(max-width: 425px)";
 
   const image = document.createElement('img');

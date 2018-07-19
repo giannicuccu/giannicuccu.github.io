@@ -87,15 +87,15 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const webpImage = document.getElementById('img-webp');
-  webpImage.setAttribute('srcset', '/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '.webp');
+  webpImage.setAttribute('srcset', 'https://giannicuccu.github.io/UDCT/RRAPP/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '.webp');
 
   const mobileSmallImage = document.getElementById('img-jpg-small');
-  mobileSmallImage.setAttribute('srcset', '/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '-small.jpg');
+  mobileSmallImage.setAttribute('srcset', 'https://giannicuccu.github.io/UDCT/RRAPP/dist/img/' + DBHelper.imageNameForRestaurant(restaurant) + '-small.jpg');
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
   image.setAttribute('alt','Picture of ' + restaurant.name + ' restaurant'); // set image alt attribute
-  image.src = '/dist' + DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = 'https://giannicuccu.github.io/UDCT/RRAPP/dist' + DBHelper.imageUrlForRestaurant(restaurant);
  
 
   const cuisine = document.getElementById('restaurant-cuisine');

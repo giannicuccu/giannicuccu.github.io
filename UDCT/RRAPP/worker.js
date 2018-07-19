@@ -4,14 +4,15 @@ self.addEventListener('install', function(event) {
       caches.open('restaurant-reviews-32')
       .then(function(cache) {
         return cache.addAll([
-          '/', 
-          '/restaurant.html',
-          '/css/styles.css',
-          '/data/restaurants.json',
-          '/js/dbhelper.js',
-          '/js/main.js',
-          '/js/restaurant_info.js',
-          '/img/offlinemap.png',
+          'https://giannicuccu.github.io/UDCT/RRAPP/', 
+          'https://giannicuccu.github.io/UDCT/RRAPP/index.html', 
+          'https://giannicuccu.github.io/UDCT/RRAPP/restaurant.html',
+          'https://giannicuccu.github.io/UDCT/RRAPP/css/styles.css',
+          'https://giannicuccu.github.io/UDCT/RRAPP/data/restaurants.json',
+          'https://giannicuccu.github.io/UDCT/RRAPP/js/dbhelper.js',
+          'https://giannicuccu.github.io/UDCT/RRAPP/js/main.js',
+          'https://giannicuccu.github.io/UDCT/RRAPP/js/restaurant_info.js',
+          'https://giannicuccu.github.io/UDCT/RRAPP/img/offlinemap.png',
           'https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.css',
           'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css',
           'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
@@ -73,7 +74,7 @@ self.addEventListener('install', function(event) {
       // offlineSwitch();
       // navigator.serviceWorker.controller.postMessage("OFFLINE OFFLINE");
      /* TODO: check if is a request for map images url.url.contains('MAP URL STRING PATTERN') */
-      return caches.match('/img/offlinemap.png');
+      return caches.match('https://giannicuccu.github.io/UDCT/RRAPP/img/offlinemap.png');
       // return fetch('/img/offlinemap.png')
     });
   }
