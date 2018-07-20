@@ -401,6 +401,8 @@ nav h1 a {
 
 .revcomment {}
 
+caption,th{text-align-last: left;}
+
 @media all and (min-width: 1440px) {
   #restaurants-list li {
     width: 22%;
