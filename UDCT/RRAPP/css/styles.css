@@ -423,7 +423,7 @@ caption,th{text-align: left;}
   background: #BF1722;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
-  z-index: 100;
+  z-index: 9999;
 }
 
 
