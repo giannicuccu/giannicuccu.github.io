@@ -12,6 +12,11 @@
 </head>
 
 <body class="home">
+    <div id="skiptocontent">
+        <a href="#filters">skip to filters</a>
+        <a href="#restaurants-list">skip to filter results list</a>
+        <a href="#map-container">skip to filter results map</a>
+  </div>
   <header>
     <nav>
       <h1><a href="https://giannicuccu.github.io/UDCT/RRAPP/index.html" aria-label="Home">Restaurant Reviews</a></h1>
@@ -22,7 +27,7 @@
     <section id="map-container">
       <div id="map" role="application" aria-label="Map with restaurants"></div>
     </section>
-    <section >
+    <section id="filters">
       <div class="filter-options" aria-labelledby="seachheading" tabindex="0">
         <h2 id="seachheading">Filter Results</h2>
         <select aria-controls="restaurants-list" aria-label="Filter restaurants for neighborhoods" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
